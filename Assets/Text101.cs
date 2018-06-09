@@ -6,10 +6,14 @@ using UnityEngine.UI;
 public class Text101 : MonoBehaviour
 {
     [SerializeField] Text textComponent;
+    [SerializeField] State startingState;
+
+    State state;
 
     void Start()
     {
-        textComponent.text = "Hello, world!";
+        state = startingState;
+        textComponent.text = state.GetStateStory();
     }
 
     void Update()
