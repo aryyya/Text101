@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce947a4f73b68864f9a02876a20d2288, type: 3}
+  m_Name: Win
+  m_EditorClassIdentifier: 
+  storyText: "You walk through the door to the outside. \n\nIt's daytime.\n\nYou escaped
+    the darkness!\n\nGAME OVER\n\n1. Play again."
+  nextStates:
+  - {fileID: 11400000, guid: 7b41e603258355b4387221ea13dcd8f2, type: 2}

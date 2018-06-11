@@ -9,9 +9,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ce947a4f73b68864f9a02876a20d2288, type: 3}
-  m_Name: Room01
+  m_Name: Wake up
   m_EditorClassIdentifier: 
-  storyText: This is the first room.
+  storyText: 'You wake up in a dimly lit room.
+
+
+    A candle is flickering.
+
+
+    1. Leave through the door.
+
+    2. Blow out the candle.'
   nextStates:
-  - {fileID: 11400000, guid: 76bc90150dcb01640ad4c1197db4cfdb, type: 2}
-  - {fileID: 11400000, guid: 7b41e603258355b4387221ea13dcd8f2, type: 2}
+  - {fileID: 11400000, guid: 78c6c96db1aaf194085cfef203c0dda5, type: 2}
+  - {fileID: 11400000, guid: 7cd263415c22b1a4c88ee8e3020a1239, type: 2}
