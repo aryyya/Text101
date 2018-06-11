@@ -6,18 +6,21 @@ using UnityEngine.UI;
 
 public class Text101 : MonoBehaviour
 {
-    [SerializeField] Text textComponent;
-    [SerializeField] State startingState;
+    [SerializeField] private Text textComponent;
+    [SerializeField] private State startingState;
 
-    State state;
-
-    void Start()
+    private State state;
+    private static readonly KeyCode[] keyCodes = {
+        KeyCode.Alpha1, KeyCode.Alpha2, KeyCode.Alpha3
+    };
+        
+    private void Start()
     {
         state = startingState;
         textComponent.text = state.GetStateStory();
     }
 
-    void Update()
+    private void Update()
     {
         ManageState();
     }
@@ -26,15 +29,14 @@ public class Text101 : MonoBehaviour
     {
         var nextStates = state.GetNextStates();
 
-        if (nextStates.Length >= 1 && Input.GetKeyDown(KeyCode.Alpha1))
+        for (var i = 0; i < nextStates.Length && i < keyCodes.Length; i++)
         {
-            state = nextStates[0];
+            if (Input.GetKeyDown(keyCodes[i]))
+            {
+                state = nextStates[i];
+                textComponent.text = state.GetStateStory();
+                break;
+            }
         }
-        else if (nextStates.Length >= 2 && Input.GetKeyDown(KeyCode.Alpha2))
-        {
-            state = nextStates[1];
-        }
-
-        textComponent.text = state.GetStateStory();
     }
 }
